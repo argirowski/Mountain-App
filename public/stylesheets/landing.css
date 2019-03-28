@@ -42,22 +42,22 @@ body {
   }
 /* The five images will change ... from 0 to 10, from 10 to 30 .... every image will last 10 seconds */
   .slideshow li:nth-child(1) { 
-    background-image: url(../img/mountain1.jpg) 
+    background-image: url(https://i.imgur.com/iTXbaXr.jpg) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(../img/mountain2.jpg);
+    background-image: url(https://i.imgur.com/KfA4C3z.jpg);
     animation-delay: 10s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(../img/mountain3.jpg);
+    background-image: url(https://i.imgur.com/jqcPmQo.jpg);
     animation-delay: 20s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(../img/mountain4.jpg);
+    background-image: url(https://i.imgur.com/3ZJCVEp.jpg);
     animation-delay: 30s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(../img/mountain5.jpg);
+    background-image: url(https://i.imgur.com/j8Vy4i2.jpg);
     animation-delay: 40s; 
   }
 
