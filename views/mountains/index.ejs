@@ -1,0 +1,45 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome to Mountain App</h1>
+      <p>View Our Handpicked Mountain Peaks</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/mountains/new"
+          >Add New Mountain Peak</a
+        >
+      </p>
+    </div>
+  </header>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>
+        Our Most Popular Mountain Peaks !!!!
+      </h3>
+    </div>
+  </div>
+
+  <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+    <% mountains.forEach(function(mountain) { %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= mountain.image %>" />
+        <div class="caption">
+          <h4>
+            <%= mountain.name %>
+          </h4>
+          <p>
+            <a href="/mountains/<%= mountain._id %>" class="btn btn-primary"
+              >More info</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<% include ../partials/footer %>
