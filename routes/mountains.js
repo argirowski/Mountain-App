@@ -22,6 +22,7 @@ router.get("/", function(req, res) {
 router.post("/", middleware.isLoggedIn, function(req, res) {
   // get data from form and add to mountains array
   var name = req.body.name;
+  var price = req.body.price;
   var image = req.body.image;
   var desc = req.body.description;
   var author = {
@@ -29,6 +30,7 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
     username: req.user.username
   };
   var newMountain = {
+    price: price,
     name: name,
     image: image,
     description: desc,
