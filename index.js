@@ -77,6 +77,6 @@ app.use("/mountains/:id/comments", commentRoutes);
 // ex. from "/mountains" to "/"
 app.use("/mountains", mountainRoutes);
 
-app.listen(1122, function() {
+app.listen(process.env.PORT || 1122, process.env.IP, function() {
   console.log("Server Started");
 });
