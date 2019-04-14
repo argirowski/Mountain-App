@@ -27,6 +27,7 @@ mongoose.connect("mongodb+srv://argirowski:xy-hW6NdAN9KAx3@cluser1-6fuoe.mongodb
 
 // local database
 // mongoose.connect("mongodb://localhost/mountain_app", { useNewUrlParser: true });
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
