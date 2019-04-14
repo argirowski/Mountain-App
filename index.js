@@ -20,10 +20,13 @@ var commentRoutes = require("./routes/comments"),
 // seedDB(); // seed the database
 
 // transfer to MongoDB Atlas
-mongoose.connect("mongodb+srv://argirowski:xy-hW6NdAN9KAx3@cluser1-6fuoe.mongodb.net/mountain_app?retryWrites=true");
+// mongoose.connect("mongodb+srv://argirowski:xy-hW6NdAN9KAx3@cluser1-6fuoe.mongodb.net/mountain_app?retryWrites=true");
 
 // mlab database
 // mongoose.connect("mongodb://argirowski:123456bz@ds149885.mlab.com:49885/mountain-app", { useNewUrlParser: true });
+
+// i set up the local database to be equal on process.env.DATABASEURL
+mongoose.connect(process.env.DATABASEURL);
 
 // local database
 // mongoose.connect("mongodb://localhost/mountain_app", { useNewUrlParser: true });
