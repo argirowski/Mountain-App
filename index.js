@@ -20,13 +20,15 @@ var commentRoutes = require("./routes/comments"),
 // seedDB(); // seed the database
 
 // transfer to MongoDB Atlas
+// added manually in HEROKU via key:value pair fot the MongoDB Atlas database to be the production database
 // mongoose.connect("mongodb+srv://argirowski:xy-hW6NdAN9KAx3@cluser1-6fuoe.mongodb.net/mountain_app?retryWrites=true");
 
 // mlab database
 // mongoose.connect("mongodb://argirowski:123456bz@ds149885.mlab.com:49885/mountain-app", { useNewUrlParser: true });
 
-// i set up the local database to be equal on process.env.DATABASEURL
-mongoose.connect(process.env.DATABASEURL);
+// i set up the local database to be equal on process.env.DATABASEURL for development
+var url = process.env.DATABASEURL || "mongodb://localhost/mountain_app";
+mongoose.connect(url);
 
 // local database
 // mongoose.connect("mongodb://localhost/mountain_app", { useNewUrlParser: true });
